@@ -3,11 +3,11 @@ package model;
 public abstract class Electrodomestico {
     private int id;
     private String name;
-    private String consumo;
-    private int precio;
-    private String procedencia;
+    private int consumo;
+    private double precio;
+    private int procedencia;
 
-    public Electrodomestico(int id, String name, String consumo, int precio, String procedencia) {
+    public Electrodomestico(int id, String name, int consumo, double precio, int procedencia) {
         this.id = id;
         this.name = name;
         this.consumo = consumo;
@@ -31,31 +31,31 @@ public abstract class Electrodomestico {
         this.name = name;
     }
 
-    public String getConsumo() {
+    public int getConsumo() {
         return consumo;
     }
 
-    public void setConsumo(String consumo) {
+    public void setConsumo(int consumo) {
         this.consumo = consumo;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public String getProcedencia() {
+    public int getProcedencia() {
         return procedencia;
     }
 
-    public void setProcedencia(String procedencia) {
+    public void setProcedencia(int procedencia) {
         this.procedencia = procedencia;
     }
 
     public void show(){
-        System.out.println("Por favor escoge "+ name);
+        System.out.println("El id es "+ id + " el nombre es " + name + " Su valor es " + precio);
     }
 }

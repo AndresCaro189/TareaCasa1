@@ -1,4 +1,5 @@
 package ui;
+import static ui.UItelevisores.*;
 import java.util.Scanner;
 import model.Electrodomestico;
 import model.Neveras;
@@ -24,13 +25,12 @@ public class UiMenu {
             switch (salir) {
                 case 1:
                     System.out.println("Inventario Televisores");
-                    Electrodomestico teveNew = new Televisores(1,"LG","A",450000,"A",40);
-                    teveNew.show();
+                    showMenuTelevisores();
                     break;
                 case 2:
                     System.out.println("Inventario Neveras");
-                    Electrodomestico neveNew = new Neveras(2, "toshiva","A",250000,"B",150);
-                    neveNew.show();
+                    //Electrodomestico neveNew = new Neveras(2, "toshiva","A",250000,"B",150);
+                    //neveNew.show();
                     break;
                 default:
                     System.out.println("Por favor escoge una de las opciónes");

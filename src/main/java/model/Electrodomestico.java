@@ -58,4 +58,8 @@ public abstract class Electrodomestico {
     public void show(){
         System.out.println("El id es "+ id + " el nombre es " + name + " Su valor es " + precio);
     }
+
+    public void total(){
+        System.out.println(precio);
+    }
 }

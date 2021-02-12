@@ -22,7 +22,7 @@ public class UIneveras {
             salir = Integer.valueOf(sc.nextLine());
             switch (salir) {
                 case 1:
-                    ingresandoTelevisores();
+                    ingresando() ;
                     break;
                 case 2:
                     totalList();
@@ -36,7 +36,7 @@ public class UIneveras {
         }
     }
 
-    private static void ingresandoTelevisores() {
+    private static void ingresando() {
 
 
         System.out.println("Cuantos Neveras Va ingresar");

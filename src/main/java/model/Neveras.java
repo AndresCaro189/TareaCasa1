@@ -9,7 +9,11 @@ public class Neveras extends Electrodomestico{
         this.capacidad = capacidad;
     }
 
-    public void ShowNeveras(){
-        System.out.println("Por favor escoge una de las opciónes");
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 }

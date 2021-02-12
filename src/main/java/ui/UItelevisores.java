@@ -1,10 +1,7 @@
 package ui;
-
+import static ui.UiMenu.*;
 import model.Electrodomestico;
 import model.Televisores;
-
-import static ui.UiMenu.*;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,7 +19,7 @@ public class UItelevisores {
             salir = Integer.valueOf(sc.nextLine());
             switch (salir) {
                 case 1:
-                    ingresandoTelevisores();
+                    ingresando();
                     break;
                 case 2:
                     totalList();
@@ -36,7 +33,7 @@ public class UItelevisores {
         }
     }
 
-    private static void ingresandoTelevisores() {
+    private static void ingresando() {
 
 
         System.out.println("Cuantos Televisores Va ingresar");
@@ -108,8 +105,10 @@ public class UItelevisores {
 
     static void totalList(){
         System.out.println("\n");
+        //int totaldelacompra = 0;
         for (int i = 0; i < teveNew.size(); i++) {
             teveNew.get(i).show();
+            //totaldelacompra = (int)(teveNew.get(i).total());
         }
     }
 }

@@ -15,12 +15,17 @@ public class UItelevisores {
         int salir = 0;
         while (salir != 1) {
             System.out.println("Menu Televisores");
-            System.out.println("01. Ingresar Un nuevo Televisor");
+            System.out.println("01. Ingresar Un o mas Televisores");
+            System.out.println("02. Ver lista de televisores");
+            System.out.println("00. Volver al menu anterior");
             Scanner sc = new Scanner(System.in);
             salir = Integer.valueOf(sc.nextLine());
             switch (salir) {
                 case 1:
                     ingresandoTelevisores();
+                    break;
+                case 2:
+                    totalList();
                     break;
                 case 0:
                     showMenu();
@@ -51,7 +56,7 @@ public class UItelevisores {
             Scanner scMarca = new Scanner(System.in);
             marcaTV = String.valueOf(scMarca.nextLine());
 
-            System.out.println("Ingrese el tipo de consumo en mayuscula: ");
+            System.out.println("Ingrese el tipo de consumo: ");
             System.out.println("1. $450000 ");
             System.out.println("2. $350000 ");
             System.out.println("3. $250000 ");
@@ -75,9 +80,9 @@ public class UItelevisores {
             Scanner scimportacionNoI = new Scanner(System.in);
             importacionNoI = Integer.valueOf(scimportacionNoI.nextLine());
             if (importacionNoI == 1) {
-                importacionNoIRespuesta = 250000;
-            } else if (importacionNoI == 2) {
                 importacionNoIRespuesta = 350000;
+            } else if (importacionNoI == 2) {
+                importacionNoIRespuesta = 250000;
             }
 
             System.out.println("Ingresar las pulgadas del televisor en numeros");
@@ -96,7 +101,12 @@ public class UItelevisores {
             Electrodomestico teveNewElectrodomestico = new Televisores(idTV, marcaTV, consumoRespuesta, precioTotal, importacionNoIRespuesta, pulgadasRespuesta);
             teveNew.add(teveNewElectrodomestico);
             teveNew.get(i).show();
+
         }
+
+    }
+
+    static void totalList(){
         System.out.println("\n");
         for (int i = 0; i < teveNew.size(); i++) {
             teveNew.get(i).show();

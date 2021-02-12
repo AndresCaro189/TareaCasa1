@@ -1,9 +1,9 @@
 package ui;
 import static ui.UItelevisores.*;
+import static ui.UIneveras.*;
 import java.util.Scanner;
-import model.Electrodomestico;
-import model.Neveras;
-import model.Televisores;
+
+
 
 public class UiMenu {
     /**
@@ -29,8 +29,7 @@ public class UiMenu {
                     break;
                 case 2:
                     System.out.println("Inventario Neveras");
-                    //Electrodomestico neveNew = new Neveras(2, "toshiva","A",250000,"B",150);
-                    //neveNew.show();
+                    showMenuNeveras();
                     break;
                 default:
                     System.out.println("Por favor escoge una de las opciónes");
